@@ -1,0 +1,35 @@
+/src
+│
+├── /assets                # Logos, imagens, ícones personalizados
+│
+├── /controllers           # Controladores que lidam com lógica de dados
+│   └── StatusController.js
+│
+├── /models                # Modelos de dados simulados (mockados ou API)
+│   └── statusModel.js
+│   └── projetosModel.js
+│
+├── /views                 # As páginas completas
+│   └── Dashboard.js
+│   └── ProjetosPublicos.js
+│   └── TopSecret.js
+│   └── Experimentos.js
+│   └── Insiders.js
+│   └── Comunicados.js
+│   └── Protocolo.js
+│   └── NotFound.js
+│
+├── /components            # Componentes reutilizáveis
+│   └── Sidebar.js
+│   └── Header.js
+│   └── StatusCard.js
+│   └── TerminalBox.js
+│
+├── /routes                # Arquivo central de rotas
+│   └── AppRouter.js
+│
+├── /styles                # CSS ou Tailwind config
+│   └── main.css
+│
+├── App.js                 # Entry do app
+└── index.js               # Renderização root

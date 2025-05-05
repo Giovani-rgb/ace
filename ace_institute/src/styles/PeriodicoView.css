@@ -1,0 +1,88 @@
+
+
+.main_periodico {
+  padding: 0.2rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.section_central_periodicos {
+  background-color: var(--azul-espacial);
+  
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(0, 194, 255, 0.2);
+}
+
+.central_title {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-accent);
+}
+
+.central_description {
+  font-size: 1rem;
+  color: var(--cinza-nebuloso);
+  margin-bottom: 1rem;
+}
+
+.central_filters {
+  list-style: inside square;
+  color: var(--branco-estelar);
+  padding-left: 1rem;
+}
+
+.section_filtro_busca {
+  margin-bottom: 2rem;
+}
+
+.filtro_title {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+  color: var(--verde-cosmico);
+}
+
+.filtro_input {
+  width: 80%;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: var(--branco-estelar);
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+.section_artigos_recentes {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.recentes_title {
+  font-size: 1.5rem;
+  color: var(--roxo-galactico);
+  margin-bottom: 1rem;
+}
+
+.documento_item {
+  background-color: #112244;
+  border-left: 5px solid var(--roxo-galactico);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+.documento_cabecalho {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  color: var(--verde-cosmico);
+  margin-bottom: 0.5rem;
+}
+
+.puzzle_hint {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--color-accent);
+}
