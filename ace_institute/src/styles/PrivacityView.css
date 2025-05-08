@@ -1,0 +1,48 @@
+.main_termos,
+.main_privacidade {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Courier New', Courier, monospace;
+  background-color: #111;
+  color: #f1f1f1;
+  line-height: 1.8;
+  border: 1px solid #333;
+  box-shadow: 0 0 20px rgba(255, 0, 0, 0.2);
+}
+
+.termos_titulo,
+.privacidade_titulo {
+  font-size: 2.2rem;
+  text-align: center;
+  margin-bottom: 30px;
+  border-bottom: 2px solid #c00;
+  padding-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.termos_conteudo,
+.privacidade_conteudo {
+  padding: 0 10px;
+}
+
+h2 {
+  color: #c00;
+  font-size: 1.3rem;
+  margin-top: 25px;
+  margin-bottom: 10px;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+.termos_obs,
+.privacidade_obs {
+  background-color: #1a1a1a;
+  padding: 15px;
+  border-left: 5px solid #c00;
+  font-style: italic;
+  margin-top: 30px;
+}

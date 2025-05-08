@@ -18,7 +18,9 @@ src/
 ├── assets/              # Imagens e ícones
 ├── components/          # Componentes reutilizáveis (Header, Footer, etc.)
 ├── controllers/         # Lógica de controle
-├── pages/               # Views: Home, Sobre, Programas, Periódicos
+├── views/
+|         /public
+|         /private        # Views: Home, Sobre, Programas, Periódicos
 ├── styles/              # CSS Modules
 └── App.jsx
 ```

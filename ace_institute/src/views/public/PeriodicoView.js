@@ -33,6 +33,23 @@ const PeriodicoView = () => {
 
                 <section className="section_filtro_busca">
                     <h2 className="filtro_title">Filtrar Documentos</h2>
+                    <div className="filtros">
+                        <select className="filtro_select">
+                            <option value="nivel_acesso">
+                                Nível de Acesso
+                            </option>
+                            <option value="tipo_documento">
+                                Tipo de Documento
+                            </option>
+                            <option value="vinculo_projeto">
+                                Vínculo com Projetos
+                            </option>
+                            <option value="classificacao_perigo">
+                                Classificação de Perigo
+                            </option>
+                        </select>
+                        <button className="search_button">Pesquisar</button>
+                    </div>
                 </section>
 
                 <section className="section_artigos_recentes">
@@ -40,18 +57,17 @@ const PeriodicoView = () => {
 
                     <article className="documento_item">
                         <div className="documento_cabecalho">
-                            <span>tipo documento: Dossie
-                            </span>
+                            <span>tipo documento: Dossie</span>
                             <span className="insignia_projeto">
                                 Projeto: VIGIA
                             </span>
-                            
                         </div>
                         <h3>Um Sinal de Outra Dimensão?</h3>
                         <span className="data_publicacao">
-                                Publicado em: 12/04/2025
-                            </span><br/>
-                            <span className="autor">Autor: Dr. Elías S.</span>
+                            Publicado em: 12/04/2025
+                        </span>
+                        <br />
+                        <span className="autor">Autor: Dr. Elías S.</span>
                         <p>
                             Durante um experimento com campos gravitacionais,
                             sensores detectaram padrões repetitivos anômalos.

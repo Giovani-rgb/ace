@@ -6,7 +6,7 @@ import logo from "../assets/brasao-ace.png"; // Importação correta da imagem
 const Header = () => {
   return (
     <header className="header">
-      <div className="container">
+      <div className="container-header">
         <Link to="/">
           <img src={logo} alt="Brasão da ACE" className="logo" />
         </Link>

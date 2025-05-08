@@ -1,13 +1,17 @@
 .header {
   background-color: var(--azul-espacial); /* azul-600 */
   color: white;
-  padding: 16px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  height: 45px;
+  height: auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  max-width: 1200px;
 }
 
-.container {
-  max-width: 1260px;
+.container-header {
+  width: 360px;
   height: auto;
   margin: 0 auto;
   display: flex;
@@ -17,13 +21,14 @@
 
 .logo {
  height: 50px;
- margin-right: 12px;
+ 
 }
 
 
 .nav {
+  padding: 10px;
   display: flex;
-  gap: 16px;
+  gap: 10px;
 }
 
 .link {

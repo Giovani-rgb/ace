@@ -1,3 +1,10 @@
+/* Estilo geral */
+.home-container {
+  background-color: var(--cinza-nebuloso);
+  color: #e0e0e0;
+  font-family: 'Georgia', serif;
+}
+
 .home-hero {
   position: relative;
   height: 80vh;
@@ -26,24 +33,165 @@
   animation: fadeInUp 1s ease-out;
 }
 
+
+
+
+.hero-title {
+  font-size: 2rem;
+  color: var(--roxo-galactico);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.hero-subtitle {
+  font-size: 1.2rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Projetos */
 .projects-section {
-  background: linear-gradient(to bottom, #000000, #1a1a1a);
-  padding: 40px 20px;
-  color: white;
-  min-height: 100vh;
+  padding: 3rem 2rem;
 }
 
 .projects-title {
-  text-align: center;
   font-size: 2rem;
-  margin-bottom: 30px;
-  animation: fadeInUp 1s ease-out;
+  margin-bottom: 2rem;
+  text-align: center;
+  color: #99e2b4;
 }
 
 .projects-grid {
   display: grid;
-  gap: 20px;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+}
+
+/* Linha do tempo */
+.timeline-section {
+  padding: 3rem 2rem;
+  background-color: #111;
+  border-top: 1px solid #1f1f1f;
+}
+
+.timeline-section h2 {
+  font-size: 1.8rem;
+  color: #99e2b4;
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.timeline {
+  list-style: none;
+  padding-left: 1rem;
+  border-left: 2px solid #555;
+}
+
+.timeline li {
+  margin-bottom: 1.5rem;
+  position: relative;
+  padding-left: 1rem;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -10px;
+  top: 4px;
+  width: 10px;
+  height: 10px;
+  background: #99e2b4;
+  border-radius: 50%;
+}
+
+/* Citação */
+.quotes-section {
+  background-color: #0d0d0d;
+  padding: 3rem 2rem;
+  text-align: center;
+  font-style: italic;
+  border-top: 1px solid #222;
+  border-bottom: 1px solid #222;
+}
+
+.quotes-section blockquote {
+  font-size: 1.1rem;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.quotes-section footer {
+  margin-top: 1rem;
+  font-size: 0.9rem;
+  color: #777;
+}
+
+/* Arquivos classificados */
+.classified-gallery {
+  padding: 3rem 2rem;
+  background-color: #151515;
+}
+
+.classified-gallery h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  color: #99e2b4;
+  margin-bottom: 2rem;
+}
+
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+}
+
+.doc-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  padding: 1.2rem;
+  text-align: center;
+  border-radius: 6px;
+  color: #e5ffe8;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.doc-card:hover {
+  transform: scale(1.05);
+  background-color: #263f36;
+}
+
+/* Chamada para ação */
+.cta-section {
+  background-color: #0e1c18;
+  color: #e0e0e0;
+  text-align: center;
+  padding: 3rem 2rem;
+  border-top: 1px solid #1f1f1f;
+}
+
+.cta-section h2 {
+  font-size: 1.8rem;
+  color: #99e2b4;
+  margin-bottom: 1rem;
+}
+
+.cta-button {
+  margin-top: 1rem;
+  background-color: #1b4d3e;
+  color: #fff;
+  padding: 0.8rem 2rem;
+  border: none;
+  font-size: 1.1rem;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #257d63;
 }
 
 @keyframes fadeInUp {

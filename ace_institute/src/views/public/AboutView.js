@@ -27,24 +27,29 @@ const About = () => {
           <ul className="list">
             <li><strong>Departamento de Fenômenos Inexplicáveis (DFI):</strong> Investiga eventos classificados como "além da compreensão atual".</li>
             <li><strong>Laboratório de Dobra Dimensional:</strong> Testes e simulações de viagens interdimensionais em ambientes controlados.</li>
-            <li><strong>Unidade de Recrutamento Prodigioso:</strong> Rastreia jovens com QI acima de 160 e habilidades cognitivas fora da curva.</li>
+            <li><strong>Departamento de Recrutas Prodigioso:</strong> Rastreia jovens com QI acima de 160 e habilidades cognitivas fora da curva.</li>
+            <li><strong>Extensão Casa da Evolução:</strong>Para mais informações
+            sobre a Extensão Casa da Evolução, requer nivel de acesso Classe
+            III.</li>
           </ul>
         </section>
 
         <section className="section">
           <h2 className="subtitle">O que não Contamos a Todos</h2>
           <p className="text">
-            Algumas pesquisas da ACE envolvem linguagens esquecidas, artefatos não catalogados e até contatos não-humanos. Essas informações só são reveladas a membros do nível "Sigma".
+            Algumas pesquisas da ACE envolvem linguagens esquecidas, artefatos
+            não catalogados e até contatos não-humanos. Essas informações só são
+            reveladas a membros do nível "Classe III".
           </p>
-          <p className="text">
-            <strong>Pista:</strong> Um dos documentos secretos está oculto em nosso periódico. Você saberá quando ver.
-          </p>
+         
         </section>
 
         <section className="section">
           <h2 className="subtitle">Junte-se a Nós</h2>
           <p className="text">
-            Se você acredita que há algo errado com o mundo como o conhecemos, se você sempre soube que havia mais... talvez você esteja pronto. A ACE não procura membros — ela os reconhece.
+            Se você acredita que há algo errado com o mundo como o conhecemos,
+            se você sempre soube que havia mais... talvez você esteja pronto. A
+            ACE não procura membros — ela os dá por merito.
           </p>
         </section>
       </main>
