@@ -1,0 +1,86 @@
+.profile-container {
+  background-color: #0a0a0a;
+  color: #fff;
+  padding: 2rem;
+  font-family: 'Orbitron', sans-serif;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.profile-header {
+  display: flex;
+  align-items: center;
+  border-bottom: 2px solid #222;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+}
+
+.avatar {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid #00f0ff;
+  margin-right: 1.5rem;
+  box-shadow: 0 0 12px #00f0ff60;
+}
+
+.info h1 {
+  font-size: 2rem;
+  color: #00f0ff;
+  margin: 0;
+}
+
+.role {
+  color: #ccc;
+  font-size: 1.1rem;
+}
+
+.premium-button {
+  margin-left: auto;
+  background: linear-gradient(to right, #ff00cc, #3333ff);
+  color: white;
+  border: none;
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff00ff50;
+}
+
+.section {
+  margin-top: 2rem;
+}
+
+.section h2 {
+  color: #00f0ff;
+  text-shadow: 0 0 6px #00f0ff;
+  margin-bottom: 1rem;
+}
+
+.section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.section li {
+  margin-bottom: 1rem;
+  background-color: #141414;
+  padding: 1rem;
+  border-left: 4px solid #333;
+  border-radius: 4px;
+  box-shadow: 0 0 6px #00f0ff20;
+}
+
+.date {
+  color: #aaa;
+  margin-left: 0.5rem;
+}
+
+.tags {
+  color: #ff00ff;
+  margin-left: 0.5rem;
+}
+
+.status {
+  color: #00f0ff;
+}

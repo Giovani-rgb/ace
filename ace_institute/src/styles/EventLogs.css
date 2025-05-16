@@ -1,0 +1,44 @@
+.event-logs {
+  background-color: #000;
+  color: #00ffcc;
+  padding: 20px;
+  font-family: 'Courier New', monospace;
+  border: 2px solid #00ffcc;
+  box-shadow: 0 0 8px #00ffcc;
+  border-radius: 8px;
+  margin: 20px;
+  max-height: 300px;
+  overflow-y: auto;
+  position: relative;
+}
+
+.logs-title {
+  margin-bottom: 10px;
+  text-shadow: 0 0 5px #00ffcc;
+}
+
+.logs-container {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+/* Glitch effect */
+.glitch {
+  position: relative;
+  animation: glitch 1s infinite;
+}
+
+@keyframes glitch {
+  0% { transform: translate(0); }
+  20% { transform: translate(-1px, 1px); }
+  40% { transform: translate(-1px, -1px); }
+  60% { transform: translate(1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0); }
+}
+
+.log-time {
+  color: #ff0080;
+  margin-right: 8px;
+}

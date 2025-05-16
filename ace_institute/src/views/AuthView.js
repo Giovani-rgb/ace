@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import "../styles/AuthView.css";
@@ -73,6 +74,8 @@ const AuthView = () => {
         <button id="pi-auth-btn" className="auth-btn">
           Autenticar com Pi
         </button>
+        
+        <Link to="/dashboard" className="link">To Intrepid</Link>
 
         {authResult && (
           <div className="auth-result">

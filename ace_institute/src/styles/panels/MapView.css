@@ -1,0 +1,45 @@
+.map-view {
+    width: 360px;
+    height: 80vh;
+    background: #00a1ff;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.map-terreo {
+    margin-top: 100px;
+    background-color: #0f00f0;
+}
+
+svg rect {
+    cursor: pointer;
+    stroke: #fff;
+    stroke-width: 2;
+    transition: all 0.3s ease;
+}
+
+svg rect:hover {
+    opacity: 0.8;
+    transform: scale(1.02);
+}
+
+.wall {
+    fill: none;
+    stroke: #003366;
+    stroke-width: 3;
+}
+
+.door {
+    stroke: #003366;
+    stroke-width: 1.5;
+    stroke-dasharray: 3 2;
+}
+
+.label {
+    font-size: 8px;
+    fill: #003366;
+    font-family: "Courier New", monospace;
+    text-anchor: middle;
+}

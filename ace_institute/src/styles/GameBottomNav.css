@@ -1,0 +1,30 @@
+.game-bottom-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #111;
+  display: flex;
+  width: 360px;
+  height: 50px;
+  justify-content: space-around;
+  padding: 10px 0;
+  border-top: 2px solid #333;
+  z-index: 10;
+}
+
+.game-bottom-nav button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  flex-direction: column;
+  align-items: center;
+  display: flex;
+  font-family: inherit;
+  cursor: pointer;
+}
+
+.game-bottom-nav button span {
+  font-size: 12px;
+}

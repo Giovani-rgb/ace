@@ -1,0 +1,40 @@
+.game-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: linear-gradient(90deg, #1a1a2e, #0d0d0d);
+  color: #00ffe0;
+  padding: 1rem 2rem;
+  font-family: 'Orbitron', sans-serif;
+  border-top: 2px solid #00ffe0;
+  box-shadow: 0 -4px 10px rgba(0, 255, 255, 0.2);
+  font-size: 0.85rem;
+}
+
+.footer-left, .footer-center, .footer-right {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.coord span,
+.status span,
+.version span {
+  color: #ffd700;
+}
+
+.status .ok {
+  color: #00ff00;
+}
+
+.transmission {
+  text-align: center;
+  animation: pulse 2s infinite;
+  color: #0ff;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.8; }
+  50% { opacity: 1; }
+  100% { opacity: 0.8; }
+}

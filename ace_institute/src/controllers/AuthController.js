@@ -14,7 +14,7 @@ window.addEventListener("pi-auth-click", async () => {
 
     // Verifica se o objeto está conforme o model
     const modeledResult = new AuthModel(authResult);
-    alert("Resultado da autenticação modelado:", toJson(modeledResult));
+    alert("Resultado da autenticação modelado:", modeledResult);
 
     // Envia para a view
     window.dispatchEvent(new CustomEvent("pi-auth-success", { detail: modeledResult }));

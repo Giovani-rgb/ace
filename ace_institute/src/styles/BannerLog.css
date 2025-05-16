@@ -1,0 +1,49 @@
+.banner-log {
+  width: 360px;
+  height: 90px;
+  background-color: #0f0f0f;
+  color: #00ffee;
+  border-top: 2px solid #00ffee;
+  border-bottom: 2px solid #00ffee;
+  overflow: hidden;
+  font-family: 'Courier New', monospace;
+  margin-top: 50px;
+  box-shadow: 0 0 10px #00ffee44;
+}
+
+.banner-title {
+  position: absolute;
+  left: 20px;
+  top: 5px;
+  font-size: 0.8em;
+  color: #ff0066;
+  text-shadow: 0 0 5px #ff0066;
+}
+
+.log-marquee {
+  width: 100%;
+  overflow: hidden;
+  white-space: nowrap;
+  position: relative;
+  padding-left: 150px;
+}
+
+.log-track {
+  display: inline-block;
+  animation: scroll 30s linear infinite;
+}
+
+.log-item {
+  display: inline-block;
+  margin-right: 40px;
+  color: #00ffee;
+}
+
+.log-time {
+  color: #ff00aa;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
