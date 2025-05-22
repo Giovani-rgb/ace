@@ -80,6 +80,15 @@
     padding: 10px;
     font-size: 0.85rem;
 }
+.ativa {
+  color: green;
+  font-weight: bold;
+}
+
+.inativa {
+  color: red;
+  font-weight: bold;
+}
 
 .logout-button {
     background: transparent;
