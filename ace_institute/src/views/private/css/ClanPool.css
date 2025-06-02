@@ -1,0 +1,35 @@
+.clanpool-container {
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  border-radius: 10px;
+}
+
+.clanpool-title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+
+.clanpool-button {
+  margin: 8px;
+  padding: 10px 16px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.clanpool-button:hover {
+  background-color: #2980b9;
+}
+
+.clanpool-active {
+  background-color: #2ecc71;
+}
+
+.clanpool-disabled {
+  background-color: #7f8c8d;
+  cursor: not-allowed;
+}

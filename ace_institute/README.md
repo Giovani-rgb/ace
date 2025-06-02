@@ -34,18 +34,21 @@ src/
 - Sistema modular para expansão de conteúdo
 
 ## Como rodar o projeto
-
-```bash
 # Clone o repositório
+```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
+```
 
 # Acesse a pasta
+```bash
 cd seu-repositorio
-
+```
 # Instale as dependências
+```bash
 npm install
-
+```
 # Inicie o servidor de desenvolvimento
+```bash
 npm run dev
 ```
 

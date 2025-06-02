@@ -7,9 +7,7 @@ import "../../styles/panels/PerfilView.css";
 export default function PerfilView() {
   const navigate = useNavigate();
 
-  const handleSubscribeClick = () => {
-    
-  };
+  
   const user = {
     name: 'Dra. Nyla Voss',
     role: 'Exploradora Dimensional',
@@ -30,6 +28,7 @@ export default function PerfilView() {
   };
    return (
     <div className="profile-container">
+    <GameHeader />
       <div className="profile-header">
         <img src={user.avatar} alt="Avatar" className="avatar" />
         <div className="info">
@@ -63,6 +62,7 @@ export default function PerfilView() {
           ))}
         </ul>
       </section>
+      <GameFooter />
     </div>
   );
 }

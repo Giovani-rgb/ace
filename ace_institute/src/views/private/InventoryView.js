@@ -12,7 +12,7 @@ const mockData = [
 ];
 
 export default function InventoryView() {
-const [items, setItems] = useState(mockData);
+const [items] = useState(mockData);
   const [search, setSearch] = useState('');
 
   const filteredItems = items.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));

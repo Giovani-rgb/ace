@@ -39,6 +39,7 @@ export default function MissionsView() {
       <MissionCategory title="Reconhecimento" missions={recognitionMissions} />
       <MissionCategory title="Colaborativas" missions={collaborativeMissions} />
       <MissionCategory title="Campanha" missions={campaignMissions} />
+      <GameFooter />
     </div>
   );
 }

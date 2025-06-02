@@ -7,6 +7,9 @@ import StatusPanel from "../../components/AcePanel";
 import BannerLog from "../../components/BannerLog";
 import DailyMissions from "../../components/DailyMission";
 import "../../styles/IntrepidView.css";
+import ClanPool from "./components/PoolComponent";
+
+
 
 function IntrepidView() {
   const navigate = useNavigate();
@@ -17,27 +20,11 @@ function IntrepidView() {
 
   return (
     <div className="intrepid-container">
-      <GameHeader
-        username="Giovani2021"
-        xp="25 Pi"
-        energy="75%"
-        mission="Reconhecimento Alpha"
-        onLogout={handleLogout}
-        agent={{
-          avatar: "https://example.com/avatar.png",
-          name: "Agente X",
-          codename: "Shadow",
-          role: "Explorador Dimensional",
-          division: "Núcleo de Dobra",
-          badgeId: "ACE-3041",
-          status: "Ativo",
-          clearanceLevel: "3",
-          accessPoints: 1800
-        }}
-      />
+      <GameHeader />
 
       <main className="intrepid-main">
         <BannerLog />
+        <ClanPool />
         <DailyMissions />
         <StatusPanel />
         

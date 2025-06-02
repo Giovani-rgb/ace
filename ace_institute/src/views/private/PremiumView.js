@@ -1,18 +1,32 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import '../../styles/panels/premiumView.css';
+import { handlePremiumPayment } from '../../controllers/premiumController';
+import { useAuth } from '../../contexts/AuthContext';
 
 export default function PremiumPage() {
-  const handleConfirm = async () => {
-    try {
-      const payment = await window.Pi.createPayment({
+  const { authData } = useAuth();
+  
+  useEffect(() => {
+    // Adiciona o listener quando o componente monta
+    window.addEventListener('premiumPaymentRequested', handlePremiumPayment);
+
+    // Remove o listener quando o componente desmonta
+    return () => {
+      window.removeEventListener('premiumPaymentRequested', handlePremiumPayment);
+    };
+  }, []);
+
+  const handleConfirm = () => {
+    const paymentEvent = new CustomEvent('premiumPaymentRequested', {
+      detail: {
         amount: 5,
         memo: 'Assinatura Premium (1 mês)',
-        metadata: { plan: 'premium', duration: '30d' }
-      });
-      console.log('Pagamento iniciado:', payment);
-    } catch (err) {
-      console.error('Erro ao iniciar pagamento:', err);
-    }
+        metadata: { plan: 'premium', duration: '30d' },
+        uid: authData?.user.uid
+      }
+    });
+    window.dispatchEvent(paymentEvent);
+    console.log('Evento premiumPaymentRequested disparado');
   };
 
   return (
@@ -36,3 +50,5 @@ export default function PremiumPage() {
     </div>
   );
 }
+
+
