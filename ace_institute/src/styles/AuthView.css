@@ -1,44 +1,99 @@
 .auth-container {
-  background: linear-gradient(to bottom right, var(--roxo-galactico), var(--verde-cosmico));
-  color: #e8e8e8;
-  text-align: center;
-  min-height: 100vh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  min-height: 100vh;
+  background: #0f0f0f;
+  color: #ffffff;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.main-Auth{
- margin-top: 50px;
- height: 80vh;
- background-color: var(--roxo-galactico);
+.main-auth {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.auth-card {
+  background: #1a1a1a;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.15);
+  max-width: 400px;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.auth-card h2 {
+  margin-bottom: 0.5rem;
+  color: #00ffe5;
 }
 
 .auth-btn {
-  margin-top: 1.5rem;
-  background-color: #ffcc00;
+  background-color: #00ffe5;
   color: #000;
-  padding: 0.8rem 2rem;
   border: none;
-  font-size: 1.1rem;
+  padding: 0.75rem 1.5rem;
   border-radius: 8px;
-  font-weight: bold;
   cursor: pointer;
+  font-weight: bold;
+  margin-top: 1rem;
   transition: background 0.3s ease;
 }
 
 .auth-btn:hover {
-  background-color: #e6b800;
+  background-color: #00ccbb;
 }
 
-.auth-error {
+.terms-checkbox {
   margin-top: 1rem;
-  color: #ff4d4f;
+  font-size: 0.9rem;
+  text-align: left;
+}
+
+.terms-checkbox input {
+  margin-right: 0.5rem;
+}
+
+.terms-checkbox a {
+  color: #00ffe5;
+  text-decoration: underline;
 }
 
 .auth-result {
- color: #fff;
- background-color: #cc168;
- font-size: 1.1rem;
- font-weight: bold;
+  margin-top: 1rem;
+  background: #121212;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.pi-browser-note {
+  font-size: 0.85rem;
+  color: #aaaaaa;
+  margin-top: 0.5rem;
+  text-align: center;
+}
+
+.google-play-btn {
+  margin-top: 1rem;
+  background: #3bcc5a;
+  color: #fff;
+  text-decoration: none;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background 0.3s ease;
+}
+
+.google-play-btn:hover {
+  background: #30a84a;
+}
+
+.link-debug {
+  margin-top: 2rem;
+  color: #666;
+  font-size: 0.8rem;
+  text-decoration: underline;
 }

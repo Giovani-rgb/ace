@@ -1,35 +1,140 @@
 .clanpool-container {
-  padding: 20px;
-  background-color: #111;
-  color: white;
-  border-radius: 10px;
+  background: #1e1f26; /* Cinza-azulado escuro */
+  color: #f0f0f0; /* Off-white suave */
+  padding: 1rem;
+  border-radius: 12px;
+  border: 1px solid #2e3039; /* Tom mais claro que o fundo */
+  margin: 0.5rem;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.15); /* sombra ciano discreta */
 }
 
 .clanpool-title {
-  font-size: 24px;
+  text-align: center;
   font-weight: bold;
-  margin-bottom: 16px;
+  color: #e0e0e0; /* cinza claro */
+}
+
+.content-cla {
+  border: 1px solid #3b3d48;
+  background: #2b2d36; /* cinza levemente mais claro que o container */
+  box-shadow: 0 0 10px rgba(0, 255, 240, 0.2);
+  border-radius: 10px;
+  padding: 1rem;
+}
+
+.clanpool-timer {
+  background-color: #2e7d32; /* verde suave */
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #1b5e20;
+  margin: 0.5rem 0;
+  font-weight: bold;
+}
+
+.clanpool-dropdown {
+  position: relative;
+  display: inline-block;
+  margin: 1rem 0;
+}
+
+.clanpool-dropdown-button {
+  padding: 0.5rem 1rem;
+  background-color: #2c2f36; /* cinza médio */
+  font-family: 'Orbitron', sans-serif;
+  color: #f0f0f0;
+  border: 1px solid #3b3d48;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.clanpool-dropdown-button:hover {
+  background-color: #393c44;
+}
+
+.clanpool-dropdown-list {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #2b2d36;
+  color: #f0f0f0;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  border: 1px solid #3b3d48;
+  border-radius: 8px;
+  z-index: 10;
+}
+
+.clanpool-dropdown-item {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.clanpool-total-AUDIENCIA{
+  background-color: #f0f;
+  color: #000;
+}
+.clanpool-dropdown-item:hover {
+  background-color: #393c44;
+}
+
+.clanpool-claninfo {
+  background: #2b2d36;
+  padding: 1rem;
+  border-radius: 12px;
+  margin-top: 10px;
+  color: #f0f0f0;
+  box-shadow: 0 0 10px rgba(0, 255, 240, 0.1);
+}
+
+.clanpool-insignia {
+  width: 100px;
+  height: auto;
+  display: block;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #3b3d48;
 }
 
 .clanpool-button {
-  margin: 8px;
-  padding: 10px 16px;
-  background-color: #3498db;
-  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border-radius: 8px;
   border: none;
-  border-radius: 6px;
   cursor: pointer;
+  font-weight: bold;
+  background: #1976d2; /* azul vibrante */
+  color: #ffffff;
+  transition: background 0.3s;
 }
 
 .clanpool-button:hover {
-  background-color: #2980b9;
+  background: #1565c0;
 }
 
 .clanpool-active {
-  background-color: #2ecc71;
+  background: #43a047; /* verde médio */
+  color: #ffffff;
 }
 
 .clanpool-disabled {
-  background-color: #7f8c8d;
+  background: #555a64;
+  color: #aaa;
   cursor: not-allowed;
+}
+
+.clanpool-ranking {
+  list-style: none;
+  padding: 0;
+}
+
+.clanpool-ranking li {
+  background: #2b2d36;
+  margin: 5px 0;
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 0 6px rgba(0, 255, 240, 0.1);
 }

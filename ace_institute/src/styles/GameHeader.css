@@ -22,6 +22,54 @@
     font-size: 1.5rem;
     color: #00ffc8;
 }
+.currency-selector {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+  margin-right: 1rem;
+  padding: 0.5rem;
+  background: #222;
+  border-radius: 6px;
+}
+
+.currency-icon {
+  margin-right: 0.5rem;
+}
+
+.currency-name {
+  margin-right: 0.5rem;
+  font-weight: bold;
+}
+
+.currency-balance {
+  margin-right: 0.5rem;
+  color: #0f0;
+}
+
+.currency-arrow {
+  font-size: 0.8rem;
+}
+
+.currency-dropdown {
+  position: absolute;
+  top: 110%;
+  left: 0;
+  background: #333;
+  border: 1px solid #555;
+  border-radius: 4px;
+  z-index: 10;
+}
+
+.currency-option {
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.currency-option:hover {
+  background: #444;
+}
+
 
 .logo-icon {
     font-size: 1.8rem;

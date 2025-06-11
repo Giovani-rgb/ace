@@ -5,36 +5,36 @@ import GameFooter from "../../components/GameFooter";
 import GameHeader from "../../components/GameHeader";
 import StatusPanel from "../../components/AcePanel";
 import BannerLog from "../../components/BannerLog";
-import DailyMissions from "../../components/DailyMission";
+
 import "../../styles/IntrepidView.css";
 import ClanPool from "./components/PoolComponent";
+import TaskWallPromo from "./components/TaskWallComponent";
 
-
+import { IntrepidProvider } from "../../contexts/IntrepidContext";
+import IntrepidController from "../../controllers/IntrepidController";
 
 function IntrepidView() {
-  const navigate = useNavigate();
+    const navigate = useNavigate();
 
-  const handleLogout = () => {
-    alert("Deslogando...");
-  };
-
-  return (
-    <div className="intrepid-container">
-      <GameHeader />
-
-      <main className="intrepid-main">
-        <BannerLog />
-        <ClanPool />
-        <DailyMissions />
-        <StatusPanel />
+    return (
         
-        
-      </main>
+            <IntrepidController />
+                <div className="intrepid-container">
+                    <GameHeader />
 
-      <GameBottomNav onNavigate={navigate} />
-      <GameFooter />
-    </div>
-  );
+                    <main className="intrepid-main">
+                        <BannerLog />
+                        <ClanPool />
+                        <TaskWallPromo />
+
+                        <StatusPanel />
+                    </main>
+                    <GameFooter />
+                </div>
+                <GameBottomNav onNavigate={navigate} />
+            
+     
+    );
 }
 
 export default IntrepidView;

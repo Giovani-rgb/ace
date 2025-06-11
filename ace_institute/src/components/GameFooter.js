@@ -1,23 +1,53 @@
 // components/GameFooter.tsx
-import React from 'react'
-import '../styles/GameFooter.css'
+import React from "react";
+import { Link } from "react-router-dom";
+import {
+  FaXTwitter,
+  FaRedditAlien,
+  FaDiscord,
+  FaInstagram
+} from "react-icons/fa6";
+import { PiFlame } from "react-icons/pi";
+import "../styles/GameFooter.css";
 
-const GameFooter: React.FC = () => {
+const GameFooter = () => {
+  const handleSocialClick = (url: string) => {
+    window.open(url, "_blank", "noopener,noreferrer");
+  };
+
   return (
     <footer className="game-footer">
-      <div className="footer-left">
-        <div className="coord">🛰 Coordenadas: <span>Lat 32.715, Long -117.161</span></div>
-        <div className="status">Status do Sistema: <span className="ok">Operacional</span></div>
+      <div className="footer-logo">
+        <img src="/logo.png" alt="Logo" className="logo-img" />
       </div>
-      <div className="footer-center">
-        <div className="transmission">📡 Transmissão segura via ACE.Link</div>
+
+      <div className="footer-social">
+        <button className="social-btn" onClick={() => handleSocialClick("https://twitter.com/seuPerfil")}>
+          <FaXTwitter />
+        </button>
+        <button className="social-btn" onClick={() => handleSocialClick("https://www.reddit.com/user/seuPerfil")}>
+          <FaRedditAlien />
+        </button>
+        <button className="social-btn" onClick={() => handleSocialClick("https://discord.gg/seuConvite")}>
+          <FaDiscord />
+        </button>
+        <button className="social-btn" onClick={() => handleSocialClick("https://fireside.xyz/seuPerfil")}>
+          <PiFlame />
+        </button>
+        <button className="social-btn" onClick={() => handleSocialClick("https://instagram.com/seuPerfil")}>
+          <FaInstagram />
+        </button>
       </div>
-      <div className="footer-right">
-        <div className="version">Versão do Sistema: <span>v2.3.5-b</span></div>
-        <div className="timestamp">🕒 {new Date().toLocaleTimeString()}</div>
+
+      <div className="footer-links">
+        <Link to="/termos-uso">Termos de Uso</Link>
+        <span>·</span>
+        <Link to="/privacity">Política de Privacidade</Link>
+        <span>·</span>
+        <span>&copy; {new Date().getFullYear()} ACE</span>
       </div>
     </footer>
-  )
-}
+  );
+};
 
-export default GameFooter
+export default GameFooter;

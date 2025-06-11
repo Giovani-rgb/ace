@@ -1,40 +1,56 @@
 .game-footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  background: linear-gradient(90deg, #1a1a2e, #0d0d0d);
-  color: #00ffe0;
-  padding: 1rem 2rem;
-  font-family: 'Orbitron', sans-serif;
-  border-top: 2px solid #00ffe0;
-  box-shadow: 0 -4px 10px rgba(0, 255, 255, 0.2);
-  font-size: 0.85rem;
-}
-
-.footer-left, .footer-center, .footer-right {
+  background-color: #0e0e0e;
+  color: #ccc;
+  text-align: center;
+  padding: 2rem 1rem;
+  border-top: 2px solid #222;
   display: flex;
   flex-direction: column;
-  gap: 0.4rem;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
 }
 
-.coord span,
-.status span,
-.version span {
-  color: #ffd700;
+.footer-logo .logo-img {
+  height: 60px;
+  object-fit: contain;
 }
 
-.status .ok {
-  color: #00ff00;
+.footer-social {
+  display: flex;
+  gap: 1rem;
 }
 
-.transmission {
-  text-align: center;
-  animation: pulse 2s infinite;
-  color: #0ff;
+.social-btn {
+  background-color: #1a1a1a;
+  border: none;
+  border-radius: 12px;
+  padding: 0.75rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  font-size: 1.5rem;
+  color: #fff;
 }
 
-@keyframes pulse {
-  0% { opacity: 0.8; }
-  50% { opacity: 1; }
-  100% { opacity: 0.8; }
+.social-btn:hover {
+  background-color: #333;
+}
+
+.footer-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+  font-size: 0.875rem;
+  color: #888;
+}
+
+.footer-links a {
+  color: #888;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.footer-links a:hover {
+  color: #fff;
 }

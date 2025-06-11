@@ -2,27 +2,29 @@ import React, { useEffect, useState, useContext } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+import { AuthContext } from "../contexts/AuthContext";
 import "../styles/AuthView.css";
-import "../controllers/AuthController";
-import { AuthContext } from "../contexts/AuthContext"; // Você vai criar esse arquivo
 
 const AuthView = () => {
   const [authResult, setAuthResult] = useState(null);
   const [isSending, setIsSending] = useState(false);
+  const [termsAccepted, setTermsAccepted] = useState(false);
   const navigate = useNavigate();
-
-  const { setAuthData } = useContext(AuthContext); // <-- novo
+  const { setAuthData } = useContext(AuthContext);
 
   useEffect(() => {
     const button = document.getElementById("pi-auth-btn");
 
     const handleClick = () => {
-      window.dispatchEvent(new CustomEvent("pi-auth-click"));
+      if (termsAccepted) {
+        window.dispatchEvent(new CustomEvent("pi-auth-click"));
+      } else {
+        alert("Você deve aceitar os termos de uso para continuar.");
+      }
     };
 
     const handleAuthSuccess = async (event) => {
       const fullData = event.detail;
-
       const data = {
         accessToken: fullData.accessToken,
         user: {
@@ -45,12 +47,7 @@ const AuthView = () => {
         const result = await response.json();
 
         if (response.ok) {
-          // Aqui salvamos o usuário e a seção no contexto
-          setAuthData({
-            user: result.user,
-            secao: result.secao,
-          });
-
+          setAuthData({ user: result.user, secao: result.secao });
           navigate("/dashboard");
         } else {
           console.log("Erro ao autenticar:", result.error);
@@ -70,28 +67,61 @@ const AuthView = () => {
       if (button) button.removeEventListener("click", handleClick);
       window.removeEventListener("pi-auth-success", handleAuthSuccess);
     };
-  }, [navigate, setAuthData]);
+  }, [navigate, setAuthData, termsAccepted]);
 
   return (
     <div className="auth-container">
       <Header />
+      <main className="main-auth">
+        <div className="auth-card">
+          <h2>Entrar na ACE</h2>
+          <p>Autentique-se com sua conta Pi Network.</p>
 
-      <main className="main-Auth">
-        <button id="pi-auth-btn" className="auth-btn">
-          Autenticar com Pi
-        </button>
+          <button id="pi-auth-btn" className="auth-btn">
+            Autenticar com Pi
+          </button>
 
-        <Link to="/dashboard" className="link">To Intrepid</Link>
-
-        {authResult && (
-          <div className="auth-result">
-            <h2>Bem-vindo, {authResult.user.username}!</h2>
-            <p>Aguarde um Momento...</p>
-            {isSending && <p className="loading">Enviando...</p>}
+          <div className="terms-checkbox">
+            <input
+              type="checkbox"
+              id="terms"
+              checked={termsAccepted}
+              onChange={(e) => setTermsAccepted(e.target.checked)}
+            />
+            <label htmlFor="terms">
+              Eu li e aceito os{" "}
+              <a href="/termos-de-uso" target="_blank" rel="noopener noreferrer">
+                Termos de Uso
+              </a>.
+            </label>
           </div>
-        )}
-      </main>
 
+          {authResult && (
+            <div className="auth-result">
+              <h3>Bem-vindo, {authResult.user.username}!</h3>
+              <p>Aguarde um momento...</p>
+              {isSending && <p className="loading">Enviando...</p>}
+            </div>
+          )}
+        </div>
+
+        <p className="pi-browser-note">
+          Acesse este site através do navegador Pi Network para autenticar.
+        </p>
+
+        <a
+          href="https://play.google.com/store/apps/details?id=com.blockchainvault"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="google-play-btn"
+        >
+          Baixar Pi Browser na Google Play
+        </a>
+
+        <Link to="/dashboard" className="link-debug">
+          Ignorar e ir para o Dashboard
+        </Link>
+      </main>
       <Footer />
     </div>
   );
