@@ -4,6 +4,7 @@ import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { AuthContext } from "../contexts/AuthContext";
 import "../styles/AuthView.css";
+import "../controllers/AuthController.js";
 
 const AuthView = () => {
   const [authResult, setAuthResult] = useState(null);
@@ -76,6 +77,14 @@ const AuthView = () => {
         <div className="auth-card">
           <h2>Entrar na ACE</h2>
           <p>Autentique-se com sua conta Pi Network.</p>
+          
+          {authResult && (
+            <div className="auth-result">
+              <h3>Bem-vindo, {authResult.user.username}!</h3>
+              <p>Aguarde um momento...</p>
+              {isSending && <p className="loading">Enviando...</p>}
+            </div>
+          )}
 
           <button id="pi-auth-btn" className="auth-btn">
             Autenticar com Pi
@@ -90,19 +99,13 @@ const AuthView = () => {
             />
             <label htmlFor="terms">
               Eu li e aceito os{" "}
-              <a href="/termos-de-uso" target="_blank" rel="noopener noreferrer">
+              <a href="/termos-uso" target="_blank" rel="noopener noreferrer">
                 Termos de Uso
               </a>.
             </label>
           </div>
 
-          {authResult && (
-            <div className="auth-result">
-              <h3>Bem-vindo, {authResult.user.username}!</h3>
-              <p>Aguarde um momento...</p>
-              {isSending && <p className="loading">Enviando...</p>}
-            </div>
-          )}
+          
         </div>
 
         <p className="pi-browser-note">
@@ -110,7 +113,7 @@ const AuthView = () => {
         </p>
 
         <a
-          href="https://play.google.com/store/apps/details?id=com.blockchainvault"
+          href="https://play.google.com/store/apps/details?id=pi.browser"
           target="_blank"
           rel="noopener noreferrer"
           className="google-play-btn"

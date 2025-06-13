@@ -1,7 +1,7 @@
 
-# Academia de Ciências Extraordinária - Frontend
+# V.E.R.U.M. - Frontend
 
-Este é o repositório do frontend do projeto **ACE** – um site fictício que mistura ciência, ficção e mistério. O sistema serve como vitrine para projetos secretos, periódicos enigmáticos, e programas filantrópicos de recrutamento de jovens prodígios.
+Este é o repositório do frontend do projeto **V.E.R.U.M.** – um site fictício que mistura ciência, ficção e mistério. O sistema serve como vitrine para projetos secretos, periódicos enigmáticos, e programas filantrópicos de recrutamento de jovens prodígios.
 
 ## Tecnologias Utilizadas
 

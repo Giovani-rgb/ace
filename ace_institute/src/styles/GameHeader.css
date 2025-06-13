@@ -3,52 +3,36 @@
     top: 0;
     left: 0;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background: #0c0f1a;
-    color: #f0f0f0;
-    
-    box-shadow: 0 4px 10px rgba(0, 255, 200, 0.2);
-    width: 360px;
-    height: 50px;
-    
-    z-index: 10;
+  justify-content: space-between;
+  align-items: center;
+  background: #0c0f1a;
+  color: #f0f0f0;
+  box-shadow: 0 4px 10px rgba(0, 255, 200, 0.2);
+  min-width: 100%;
+  height: 50px;
+  padding: 0 1rem;
+  z-index: 10;
 }
+/* Mobile-first: layout vertical compacto */
 
-.logo {
-    display: flex;
-    align-items: center;
-    font-family: 'Orbitron', sans-serif;
-    font-size: 1.5rem;
-    color: #00ffc8;
-}
+
+ /* CURRENCY SELECTOR */
 .currency-selector {
   display: flex;
   align-items: center;
   cursor: pointer;
   position: relative;
-  margin-right: 1rem;
-  padding: 0.5rem;
+  padding: 0.4rem 0.6rem;
   background: #222;
   border-radius: 6px;
+  font-size: 0.9rem;
 }
 
-.currency-icon {
-  margin-right: 0.5rem;
-}
-
-.currency-name {
-  margin-right: 0.5rem;
-  font-weight: bold;
-}
-
-.currency-balance {
-  margin-right: 0.5rem;
-  color: #0f0;
-}
-
+.currency-icon,
+.currency-name,
+.currency-balance,
 .currency-arrow {
-  font-size: 0.8rem;
+  margin-right: 0.3rem;
 }
 
 .currency-dropdown {
@@ -58,7 +42,7 @@
   background: #333;
   border: 1px solid #555;
   border-radius: 4px;
-  z-index: 10;
+  z-index: 20;
 }
 
 .currency-option {
@@ -70,64 +54,47 @@
   background: #444;
 }
 
-
-.logo-icon {
-    font-size: 1.8rem;
-    margin-right: 10px;
+ /* USER & LOGOUT AREA */
+.user-controls {
+  display: flex;
+  margin-right: 25px;
+  align-items: center;
+  gap: 0.5rem;
 }
 
+ /* ícone do usuário */
 .user-dropdown {
-    position: relative;
+  position: relative;
 }
 
 .user-icon {
-    font-size: 2rem;
-    cursor: pointer;
-    transition: transform 0.2s;
-    color: #ffffffcc;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #ffffffcc;
+  transition: transform 0.2s;
 }
 
 .user-icon:hover {
-    transform: scale(1.1);
-    color: #00ffc8;
+  transform: scale(1.1);
+  color: #00ffc8;
 }
 
+/* dropdown de informações */
 .user-info-card {
-    position: absolute;
-    top: 0;
-    right: 0;
-    top: 48px;
-    background: #1a1e2d;
-    color: #f0f0f0;
-    border: 1px solid #00ffc8;
-    border-radius: 10px;
-    padding: 16px;
-    width: 200px;
-    z-index: 5;
-    box-shadow: 0 0 15px rgba(0, 255, 200, 0.4);
-    font-size: 0.9rem;
+  position: absolute;
+  top: 48px;
+  right: 0;
+  background: #1a1e2d;
+  color: #f0f0f0;
+  border: 1px solid #00ffc8;
+  border-radius: 10px;
+  padding: 16px;
+  width: 200px;
+  z-index: 15;
+  font-size: 0.9rem;
+  box-shadow: 0 0 15px rgba(0, 255, 200, 0.4);
 }
 
-.badge-card {
-    display: flex;
-    margin-top: 12px;
-    background: #101320;
-    border-radius: 10px;
-    overflow: hidden;
-    border: 1px solid #00ffc844;
-}
-
-.avatar {
-    width: 80px;
-    height: 80px;
-    object-fit: cover;
-    border-right: 1px solid #00ffc822;
-}
-
-.badge-info {
-    padding: 10px;
-    font-size: 0.85rem;
-}
 .ativa {
   color: green;
   font-weight: bold;
@@ -138,16 +105,43 @@
   font-weight: bold;
 }
 
+ /*botão logout */
 .logout-button {
-    background: transparent;
-    border: none;
-    cursor: pointer;
-    color: #ffffffcc;
-    transition: color 0.2s, transform 0.2s;
-    font-size: 1.5rem;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  color: #ffffffcc;
+  font-size: 1.5rem;
+  transition: color 0.2s, transform 0.2s;
 }
 
 .logout-button:hover {
-    color: #ff4b4b;
-    transform: scale(1.1);
+  color: #ff4b4b;
+  transform: scale(1.1);
+}
+
+/* ---------------------------------------
+   MEDIA QUERY para telas maiores
+---------------------------------------- */
+@media (min-width: 600px) {
+  .game-header {
+    justify-content: space-between;
+    padding: 0 2rem;
+  }
+
+  .currency-selector {
+    font-size: 1rem;
+  }
+
+  .user-controls {
+    gap: 1rem;
+  }
+
+  .user-icon {
+    font-size: 2rem;
+  }
+
+  .logout-button {
+    font-size: 1.7rem;
+  }
 }

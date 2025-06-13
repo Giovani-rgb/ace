@@ -31,7 +31,7 @@ const Footer = () => {
         
         <div className="bottom">
           <p>
-            © {new Date().getFullYear()} Academia de Ciências Extraordinária. Todos os direitos reservados.
+            © {new Date().getFullYear()} V.E.R.U.M. | Todos os direitos reservados.
           </p>
         </div>
       </div>

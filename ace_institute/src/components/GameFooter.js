@@ -44,7 +44,7 @@ const GameFooter = () => {
         <span>·</span>
         <Link to="/privacity">Política de Privacidade</Link>
         <span>·</span>
-        <span>&copy; {new Date().getFullYear()} ACE</span>
+        <span>&copy; {new Date().getFullYear()} V.E.R.U.M. | Todos os direitos reservados.</span>
       </div>
     </footer>
   );
