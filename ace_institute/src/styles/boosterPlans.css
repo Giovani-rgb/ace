@@ -1,0 +1,120 @@
+.booster-wrapper {
+  background: linear-gradient(to bottom, #0a0a0a, #121212);
+  color: #fff;
+  min-height: 100vh;
+  padding-bottom: 4rem;
+  overflow-x: hidden;
+}
+
+.booster-container {
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+.booster-main {
+  text-align: center;
+}
+
+.booster-title {
+  font-size: 1.4rem;
+  color: #00ffd0;
+  margin-bottom: 1.5rem;
+}
+
+.booster-cotacao {
+  font-size: 1rem;
+  color: #aaa;
+  margin-bottom: 1.5rem;
+}
+
+.booster-card {
+  background: #1a1a1a;
+  border-radius: 16px;
+  padding: 1.5rem 1rem;
+  margin: 1.2rem 0;
+  box-shadow: 0 0 12px rgba(0, 255, 255, 0.15);
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.booster-card:hover {
+  transform: scale(1.02);
+}
+
+.booster-badge {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  background: #ff0077;
+  color: #fff;
+  padding: 0.3rem 0.8rem;
+  font-size: 0.75rem;
+  border-radius: 12px;
+  font-weight: bold;
+  box-shadow: 0 0 10px #ff0077aa;
+  z-index: 10;
+}
+
+.booster-plan-title {
+  font-size: 1.2rem;
+  color: #7df9ff;
+  margin-bottom: 1rem;
+}
+
+.booster-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.booster-benefit {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  margin: 0.5rem 0;
+  font-size: 0.95rem;
+  color: #ccc;
+}
+
+.booster-btn {
+  margin-top: 1.2rem;
+  padding: 0.75rem 1.2rem;
+  border-radius: 10px;
+  border: none;
+  font-family: 'Orbitron', sans-serif;
+  background: #00ffd0;
+  color: #000;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s;
+  width: 100%;
+}
+
+.booster-btn:hover {
+  background: #00bfa6;
+}
+
+/* 📱 Responsivo para tablets/desktops */
+@media screen and (min-width: 768px) {
+  .booster-container {
+    max-width: 700px;
+  }
+
+  .booster-title {
+    font-size: 1.8rem;
+  }
+
+  .booster-card {
+    padding: 2rem;
+    margin: 2rem auto;
+    height: auto;
+  }
+
+  .booster-btn {
+    font-size: 1.1rem;
+  }
+}

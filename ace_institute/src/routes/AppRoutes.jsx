@@ -7,16 +7,18 @@ import PeriodicoView from "../views/public/PeriodicoView";
 import PrivacityView from "../views/public/PrivacityView";
 import TermosView from "../views/public/TermosView";
 import AuthView from "../views/AuthView";
-import IntrepidView from "../views/private/IntrepidView";
 
+import IntrepidView from "../views/private/IntrepidView";
 import MapView from "../views/private/MapView";
 import InventoryView from "../views/private/InventoryView";
 import MissionsView from "../views/private/MissionView";
 import PerfilView from "../views/private/PerfilView";
 import PremiumPage from "../views/private/PremiumView";
 import TaskWallView from "../views/private/TaskWallView";
+import BoosterPlans from "../views/private/BoosterPackView";
 
 import { IntrepidProvider } from "../contexts/IntrepidContext";
+import { BoosterProvider } from "../contexts/boosterContext";
 
 const AppRoutes = () => {
     return (
@@ -38,6 +40,17 @@ const AppRoutes = () => {
                         <IntrepidProvider>
                             <IntrepidView />
                         </IntrepidProvider>
+                    }
+                />
+
+                <Route
+                    path="/dashboard/booster"
+                    element={
+                        <BoosterProvider>
+                            <IntrepidProvider>
+                                <BoosterPlans />
+                            </IntrepidProvider>
+                        </BoosterProvider>
                     }
                 />
 

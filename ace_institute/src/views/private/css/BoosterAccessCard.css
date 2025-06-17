@@ -1,0 +1,53 @@
+.booster-access-card {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #1f1f1f, #2a2a2a);
+  border: 2px solid #00ffd0;
+  border-radius: 16px;
+  padding: 1.2rem;
+  margin: 1rem 0;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.booster-access-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 12px #00ffd080;
+}
+
+.booster-access-icon {
+  margin-right: 1rem;
+  color: #00ffd0;
+}
+
+.booster-access-content {
+  flex: 1;
+}
+
+.booster-access-title {
+  margin: 0;
+  font-size: 1.3rem;
+  color: #7df9ff;
+}
+
+.booster-access-description {
+  font-size: 0.95rem;
+  color: #ccc;
+  margin: 0.5rem 0;
+}
+
+.booster-access-button {
+  padding: 0.5rem 1rem;
+  background: #00ffd0;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  color: #000;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.booster-access-button:hover {
+  background: #00bfa6;
+}
