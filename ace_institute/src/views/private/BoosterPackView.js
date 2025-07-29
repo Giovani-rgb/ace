@@ -17,7 +17,7 @@ const plans = [
     apy: "120% APY (1 ano)",
     governance: true,
     whitelist: false,
-    priceUSD: 20,
+    priceUSD: 10,
     badge: null
   },
   {
@@ -27,7 +27,7 @@ const plans = [
     apy: "140% APY (1 ano)",
     governance: true,
     whitelist: true,
-    priceUSD: 50,
+    priceUSD: 25,
     badge: "Recomendado"
   },
   {
@@ -37,7 +37,7 @@ const plans = [
     apy: "180% APY (1 ano)",
     governance: true,
     whitelist: true,
-    priceUSD: 120,
+    priceUSD: 60,
     badge: "Mais vendido"
   }
 ];
@@ -99,7 +99,7 @@ export default function BoosterPlans() {
                         detail: { ...plan, pricePi: parseFloat(pricePi) }
                       });
                       window.dispatchEvent(eventoSelecionado);
-                      alert(`✅ Você selecionou o ${plan.title} por ${pricePi} Pi`);
+                      
                     }}
                   >
                     Selecionar

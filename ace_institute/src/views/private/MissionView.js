@@ -2,6 +2,7 @@ import React from "react";
 import GameHeader from "../../components/GameHeader";
 import MissionCategory from "../../components/MissionCategory";
 import GameFooter from "../../components/GameFooter";
+import IntrepidController from "../../controllers/IntrepidController";
 import "../../styles/panels/MissionsView.css";
 
 export default function MissionsView() {
@@ -34,6 +35,7 @@ export default function MissionsView() {
 
   return (
     <div className="missions-container">
+    <IntrepidController/>
     <GameHeader/>
       <h1 className="missions-title">🛰️ Missões da ACE</h1>
       <MissionCategory title="Reconhecimento" missions={recognitionMissions} />

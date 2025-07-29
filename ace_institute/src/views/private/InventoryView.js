@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import GameHeader from "../../components/GameHeader";
 import InventoryItemCard from "../../components/InventoryItemCard";
 
+import IntrepidController from "../../controllers/IntrepidController";
 import GameFooter from "../../components/GameFooter";
 import "../../styles/panels/InventoryView.css";
 
@@ -18,6 +19,7 @@ const [items] = useState(mockData);
   const filteredItems = items.filter(item => item.name.toLowerCase().includes(search.toLowerCase()));
   return (
     <div className="inventory-container">
+    <IntrepidController />
       <GameHeader />
       <h1 className="inventory-title">📦 Inventário A.C.E.</h1>
       <div className="inventory-controls">

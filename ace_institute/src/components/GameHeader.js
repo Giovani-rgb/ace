@@ -2,7 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaUserCircle, FaPowerOff } from "react-icons/fa";
 import "../styles/GameHeader.css";
 import { useAuth } from "../contexts/AuthContext";
-import { useIntrepid } from "../contexts/IntrepidContext"; // Correto: usa o contexto compartilhado
+import { useIntrepid } from "../contexts/IntrepidContext";
 
 function GameHeader() {
     const [showDropdown, setShowDropdown] = useState(false);
@@ -10,12 +10,11 @@ function GameHeader() {
     const [selectedCurrency, setSelectedCurrency] = useState("Pi");
 
     const { authData } = useAuth();
-    const { balance } = useIntrepid(); // Aqui é onde corrigimos
+    const { balance } = useIntrepid();
 
     useEffect(() => {
         if (!authData?.user?.uid) return;
 
-        // Dispara evento para buscar saldo via IntrepidController
         window.dispatchEvent(
             new CustomEvent("getBalance", {
                 detail: { uid: authData.user.uid }
@@ -37,12 +36,12 @@ function GameHeader() {
         }
     };
 
-    const handleCurrencySelect = currency => {
+    const handleCurrencySelect = (currency) => {
         setSelectedCurrency(currency);
         setCurrencyDropdown(false);
     };
 
-    const getCurrencyIcon = currency => {
+    const getCurrencyIcon = (currency) => {
         switch (currency) {
             case "Pi":
                 return "🪙";
@@ -55,6 +54,7 @@ function GameHeader() {
 
     return (
         <header className="game-header">
+            {/* Seletor de moedas */}
             <div
                 className="currency-selector"
                 onClick={() => setCurrencyDropdown(!currencyDropdown)}
@@ -90,7 +90,7 @@ function GameHeader() {
                 )}
             </div>
 
-            {/* AGRUPAMENTO DOS BOTÕES DE USUÁRIO E LOGOUT */}
+            {/* Controle do usuário */}
             <div className="user-controls">
                 <div className="user-dropdown">
                     <FaUserCircle
@@ -99,24 +99,50 @@ function GameHeader() {
                     />
                     {showDropdown && (
                         <div className="user-info-card">
-                            <p>
-                                <strong>Usuário:</strong> {user?.username}
-                            </p>
-                            <p>
-                                <strong>UID:</strong> {user?.uid}
-                            </p>
+                            <p><strong>Usuário:</strong> {user?.username}</p>
+                            <p><strong>UID:</strong> {user?.uid}</p>
+
                             <br />
-                            <p>
-                                <strong>ID Seção:</strong> {secao?.idSecao}
-                            </p>
+
+                            <p><strong>ID Seção:</strong> {secao?.idSecao}</p>
                             <p>
                                 <strong>Status:</strong>{" "}
-                                <span
-                                    className={
-                                        secao?.ativa ? "ativa" : "inativa"
-                                    }
-                                >
+                                <span className={secao?.ativa ? "ativa" : "inativa"}>
                                     {secao?.ativa ? "Ativa" : "Inativa"}
+                                </span>
+                            </p>
+
+                            <br />
+
+                            <p><strong>Indicação:</strong></p>
+                            <div className="referral-block">
+                                <a
+                                    href={`https://seujogo.com/?ref=${user?.codReferral}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="referral-link"
+                                >
+                                    seujogo.com/?ref={user?.codReferral}
+                                </a>
+                                <button
+                                    className="copy-button"
+                                    onClick={() =>
+                                        navigator.clipboard.writeText(`https://seujogo.com/?ref=${user?.codReferral}`)
+                                    }
+                                    title="Copiar"
+                                >
+                                    📋
+                                </button>
+                            </div>
+
+                            {user?.codInvited && (
+                                <p><strong>Indicado por:</strong> {user.codInvited}</p>
+                            )}
+
+                            <p>
+                                <strong>Investidor:</strong>{" "}
+                                <span className={user?.isInvestor ? "ativa" : "inativa"}>
+                                    {user?.isInvestor ? "Sim" : "Não"}
                                 </span>
                             </p>
                         </div>

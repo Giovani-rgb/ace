@@ -1,150 +1,392 @@
-/* Fonte */
-
-
-/* Container */
-.home-container {
+.home-hero {
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
   display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: #ffffff;
+  z-index: 1;
 }
 
-/* Hero */
-.home-hero {
-  background: linear-gradient(135deg, rgba(0, 255, 247, 0.1), rgba(138, 43, 226, 0.1));
-  padding: 5rem 2rem;
-  text-align: center;
-  margin-top: 55px;
+.home-hero-background {
+  position: absolute;
+  width: 100%;
+  height: 120%;
+  background-image: url('../assets/images/hero-background.png'); /* Substitua com sua imagem real */
+  background-size: cover;
+  background-position: center;
+  filter: brightness(0.3) blur(2px);
+  transform: translateY(-10vh);
+  animation: parallaxMove 20s infinite linear;
+  z-index: -1;
+}
+
+@keyframes parallaxMove {
+  0% {
+    transform: translateY(-10vh);
+  }
+  100% {
+    transform: translateY(10vh);
+  }
 }
 
 .hero-title {
-  font-size: 3rem;
-  color: #00FFF7;
-  text-shadow: 0 0 10px #00FFF7, 0 0 20px #00FFF7;
-  margin: 0 0 1rem 0;
+  font-size: 2rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .rotating-word {
-  display: inline-block;
-  font-size: 2rem;
-  color: #FF00A8;
-  text-shadow: 0 0 10px #FF00A8, 0 0 20px #FF00A8;
-  transition: opacity 0.5s ease-in-out;
+  color: #72ffe6;
+  font-family: "Orbitron", sans-serif;
+  margin-left: 0.5rem;
 }
 
-.hero-subtitle {
-  font-size: 1.25rem;
-  color: #E0E0E0;
-  opacity: 0.9;
+/* Glitch RGB */
+.glitch {
+  position: relative;
 }
 
-/* Seções */
-section {
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  width: 100%;
+  overflow: hidden;
+  color: #fff;
+  background: transparent;
+}
+
+.glitch::before {
+  animation: glitchTop 2s infinite linear;
+  color: #ff00c8;
+  top: -2px;
+}
+
+.glitch::after {
+  animation: glitchBottom 2s infinite linear;
+  color: #00fff0;
+  top: 2px;
+}
+
+@keyframes glitchTop {
+  0% {
+    clip-path: inset(0 0 90% 0);
+  }
+  50% {
+    clip-path: inset(0 0 10% 0);
+    transform: translateX(-3px);
+  }
+  100% {
+    clip-path: inset(0 0 90% 0);
+  }
+}
+
+@keyframes glitchBottom {
+  0% {
+    clip-path: inset(90% 0 0 0);
+  }
+  50% {
+    clip-path: inset(10% 0 0 0);
+    transform: translateX(3px);
+  }
+  100% {
+    clip-path: inset(90% 0 0 0);
+   }
+}
+
+
+
+/* Estilo base para seções */
+.about-section,
+.how-it-works {
+  background: radial-gradient(circle at center, #121212 0%, #0a0a0a 100%);
   padding: 4rem 2rem;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(4px);
+  color: #e0e0e0;
+  font-family: "Orbitron", "Inter", sans-serif;
+  border-bottom: 1px solid #222;
 }
 
-h2 {
+.section-title {
   font-size: 2rem;
-  color: #8A2BE2;
+  text-align: center;
+  margin-bottom: 2rem;
+  color: #00ffe0;
+  text-shadow: 0 0 5px #00ffe0, 0 0 10px #00ffe0;
+  letter-spacing: 0.05em;
+}
+
+/* Parágrafos descritivos */
+.about-section p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 1.5rem auto;
+  text-align: center;
+  line-height: 1.6;
+  color: #ccc;
+}
+
+/* Lista de passos */
+.how-it-works .steps-list {
+  list-style: decimal-leading-zero;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 1.5rem;
+}
+
+.how-it-works li {
   margin-bottom: 1rem;
-  text-shadow: 0 0 8px #8A2BE2;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  color: #ddd;
 }
 
-/* Textos */
-.about-section p,
-.how-it-works li,
-.community-section p {
-  font-size: 1rem;
-  line-height: 1.8;
-  color: #E0E0E0;
-  opacity: 0.85;
+.how-it-works strong {
+  color: #FFD700;
+  font-weight: 600;
 }
 
-/* Listas */
-ol {
-  list-style: decimal inside;
-  padding: 0;
+/* Responsivo */
+@media (min-width: 768px) {
+  .about-section,
+  .how-it-works {
+    padding: 6rem 4rem;
+  }
+
+  .section-title {
+    font-size: 2.5rem;
+  }
+
+  .about-section p,
+  .how-it-works li {
+    font-size: 1.25rem;
+  }
 }
 
-/* Projects grid */
-.projects-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
-  gap: 1.5rem;
+/* ------------------------------ */
+/* Seção: Histórico Oculto        */
+/* ------------------------------ */
+.timeline-section {
+  padding: 3rem 1.5rem;
+  color: #e6e6e6;
+  background: linear-gradient(to bottom, rgba(0,0,0,0.9), rgba(10,10,10,0.9)),
+              url("../assets/bg-timeline.png") no-repeat center/cover;
+  position: relative;
+  overflow: hidden;
 }
 
-.project-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1.5rem;
-  border-radius: 1rem;
-  border: 1px solid rgba(0, 255, 247, 0.2);
-  box-shadow: 0 0 20px rgba(0, 255, 247, 0.2);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+/* Animação de "flicker" sutil */
+@keyframes flicker {
+  0%, 19%, 21%, 23%, 25%, 54%, 56%, 100% {
+    opacity: 1;
+  }
+  20%, 24%, 55% {
+    opacity: 0.5;
+  }
 }
 
-.project-card:hover {
-  transform: translateY(-8px) scale(1.03);
-  box-shadow: 0 0 30px rgba(0, 255, 247, 0.5);
-}
-
-/* Classified Gallery */
-.classified-gallery .gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.doc-card {
-  background: rgba(255, 255, 255, 0.05);
-  padding: 1rem;
-  border-radius: 0.75rem;
-  border: 1px solid rgba(255, 0, 168, 0.2);
-  color: #FF00A8;
-  text-shadow: 0 0 5px #FF00A8;
+.timeline-section h2 {
+  font-size: 1.75rem;
+  text-align: center;
+  color: #FFD700;
+  margin-bottom: 2rem;
+  animation: flicker 4s infinite ease-in-out;
 }
 
 /* Timeline */
 .timeline {
   list-style: none;
-  padding: 0;
+  padding-left: 0;
+  border-left: 2px solid #FFD700;
+  margin: 0 auto;
+  max-width: 600px;
+  position: relative;
 }
 
 .timeline li {
-  margin-bottom: 1rem;
   position: relative;
-  padding-left: 1.5rem;
+  padding: 1rem 1rem 1rem 1.5rem;
+  margin-bottom: 1.25rem;
+  color: #ccc;
+  font-size: 1rem;
+  line-height: 1.6;
+  transition: transform 0.3s ease;
+}
+
+.timeline li:hover {
+  transform: translateX(4px);
+  color: #fff;
 }
 
 .timeline li::before {
-  content: "▶";
+  content: "";
   position: absolute;
-  left: 0;
-  color: #FFD700;
+  top: 1.2rem;
+  left: -8px;
+  width: 12px;
+  height: 12px;
+  background-color: #FFD700;
+  border-radius: 50%;
+  box-shadow: 0 0 8px #FFD700;
 }
 
-/* Botões */
+/* Destaque do ano */
+.timeline li strong {
+  color: #FFD700;
+  font-weight: 600;
+}
+
+/* Glitch Effect (apenas no texto "Agora") */
+.glitch {
+  position: relative;
+  color: #FFD700;
+  font-weight: 600;
+  display: inline-block;
+}
+
+.glitch::before,
+.glitch::after {
+  content: attr(data-text);
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: #FFD700;
+  background: transparent;
+  overflow: hidden;
+  width: 100%;
+  pointer-events: none;
+}
+
+.glitch::before {
+  animation: glitchTop 2s infinite linear alternate-reverse;
+  color: #ffcc00;
+  clip-path: inset(0 0 50% 0);
+}
+
+.glitch::after {
+  animation: glitchBottom 2s infinite linear alternate-reverse;
+  color: #ffee55;
+  clip-path: inset(50% 0 0 0);
+}
+
+@keyframes glitchTop {
+  0% { transform: translate(0px, 0px); opacity: 1; }
+  20% { transform: translate(-1px, -1px); }
+  40% { transform: translate(1px, 1px); }
+  60% { transform: translate(-1px, 1px); }
+  80% { transform: translate(1px, -1px); }
+  100% { transform: translate(0px, 0px); opacity: 1; }
+}
+
+@keyframes glitchBottom {
+  0% { transform: translate(0px, 0px); opacity: 1; }
+  20% { transform: translate(1px, 1px); }
+  40% { transform: translate(-1px, -1px); }
+  60% { transform: translate(1px, -1px); }
+  80% { transform: translate(-1px, 1px); }
+  100% { transform: translate(0px, 0px); opacity: 1; }
+}
+
+/* Scroll Reveal Base */
+.timeline li {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Quando ativado via JS */
+.timeline li.reveal {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+/* ------------------------------ */
+/* Responsivo para telas grandes */
+/* ------------------------------ */
+@media (min-width: 768px) {
+  .timeline-section {
+    padding: 4rem 2rem;
+  }
+
+  .timeline-section h2 {
+    font-size: 2.25rem;
+  }
+
+  .timeline li {
+    font-size: 1.125rem;
+  }
+}
+
+
+/* ------------------------ */
+/* Seção: Comunidade        */
+/* ------------------------ */
+.community-section {
+  padding: 3rem 1.5rem;
+  background-color: #0b0b0b;
+  color: #e6e6e6;
+  text-align: center;
+  border-top: 2px solid #1e1e1e;
+  border-bottom: 2px solid #1e1e1e;
+}
+
+/* Título */
+.community-section h2 {
+  font-size: 1.75rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #FFD700; /* Dourado estilo Pi Network */
+  letter-spacing: 1px;
+}
+
+/* Texto */
+.community-section p {
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2rem auto;
+  color: #aaa;
+}
+
+/* Botão CTA */
 .cta-button {
-  background: linear-gradient(135deg, #00FFF7, #8A2BE2);
-  border: none;
-  color: #0a0a0a;
+  background: transparent;
+  color: #FFD700;
+  border: 2px solid #FFD700;
   padding: 0.75rem 1.5rem;
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 500;
+  border-radius: 8px;
   cursor: pointer;
-  border-radius: 0.5rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
 }
 
 .cta-button:hover {
+  background-color: #FFD700;
+  color: #0b0b0b;
   transform: scale(1.05);
-  box-shadow: 0 0 15px rgba(0, 255, 247, 0.5);
 }
 
-/* Footer */
-footer {
-  padding: 2rem;
-  text-align: center;
-  font-size: 0.8rem;
-  opacity: 0.5;
+/* ------------------------ */
+/* Responsivo: desktop      */
+/* ------------------------ */
+@media (min-width: 768px) {
+  .community-section {
+    padding: 4rem 2rem;
+  }
+
+  .community-section h2 {
+    font-size: 2.25rem;
+  }
+
+  .community-section p {
+    font-size: 1.125rem;
+  }
 }

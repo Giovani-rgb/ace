@@ -2,6 +2,8 @@ import React from "react";
 import { useNavigate } from 'react-router-dom';
 import GameHeader from "../../components/GameHeader";
 import GameFooter from "../../components/GameFooter";
+
+import IntrepidController from "../../controllers/IntrepidController";
 import "../../styles/panels/PerfilView.css";
 
 export default function PerfilView() {
@@ -28,6 +30,7 @@ export default function PerfilView() {
   };
    return (
     <div className="profile-container">
+    <IntrepidController/>
     <GameHeader />
       <div className="profile-header">
         <img src={user.avatar} alt="Avatar" className="avatar" />

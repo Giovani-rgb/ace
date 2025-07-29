@@ -1,6 +1,5 @@
 /* Banner container */
 .banner-log-container {
-  margin-top: 55px;
   min-width: 100%;
   background: linear-gradient(to right, #0f0c29, #302b63, #24243e);
   box-shadow: 0 0 10px rgba(0, 255, 255, 0.3);

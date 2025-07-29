@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import IntrepidController from "../../controllers/IntrepidController";
 import GameHeader from "../../components/GameHeader";
 import GameBottomNav from "../../components/GameBottomNav";
 import GameFooter from "../../components/GameFooter";
@@ -10,6 +11,7 @@ export default function MapView() {
 
     return (
         <div className="map-view">
+        <IntrepidController />
             <GameHeader />
             <div className="map-terreo">
                 <svg viewBox="0 0 800 600" width="360" height="540" fill="#f0f">

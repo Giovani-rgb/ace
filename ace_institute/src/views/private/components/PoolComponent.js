@@ -121,6 +121,11 @@ function ClanPool() {
 
     return (
         <div className="clanpool-container">
+        {/* Este componente esta bem ruim presciso dar uma repaginada, quero que
+        ele faca a requisicao da pool mais recente, sera uma pool baseada em
+        trafego por conteudo produzido, tipo meu cliente produz algo que chama
+        atencao e recebe muitas visitas na pagina do conteudo entao eu quero que
+        ele possa apostar seu engajamento aqui*/}
             <h2 className="clanpool-title">Pool de Recompensas</h2>
             <hr />
             <div className="content-cla">
