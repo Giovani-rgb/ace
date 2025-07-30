@@ -1,53 +1,57 @@
 import React, { createContext, useContext, useState, useEffect } from "react";
+import Cookies from "js-cookie";
 
-// Chave do cache no localStorage
-const AUTH_CACHE_KEY = "authData";
+const AUTH_COOKIE_KEY = "authData";
 
 export const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [authData, setAuthDataState] = useState(null);
+    const [authData, setAuthDataState] = useState(null);
 
-  // 🔁 Recupera dados do cache ao iniciar
-  useEffect(() => {
-    const cached = localStorage.getItem(AUTH_CACHE_KEY);
-    if (cached) {
-      try {
-        const parsed = JSON.parse(cached);
-        setAuthDataState(parsed);
-      } catch (err) {
-        console.error("Erro ao recuperar authData do cache:", err);
-        localStorage.removeItem(AUTH_CACHE_KEY);
-      }
-    }
-  }, []);
+    // 🔁 Recupera dados do cookie ao iniciar
+    useEffect(() => {
+        const cookie = Cookies.get(AUTH_COOKIE_KEY);
+        if (cookie) {
+            try {
+                const parsed = JSON.parse(cookie);
+                setAuthDataState(parsed);
+            } catch (err) {
+                console.error("Erro ao recuperar authData do cookie:", err);
+                Cookies.remove(AUTH_COOKIE_KEY);
+            }
+        }
+    }, []);
 
-  // 🔄 Sempre que authData mudar, salva no cache
-  const setAuthData = (data) => {
-    setAuthDataState(data);
-    if (data) {
-      localStorage.setItem(AUTH_CACHE_KEY, JSON.stringify(data));
-    } else {
-      localStorage.removeItem(AUTH_CACHE_KEY);
-    }
-  };
+    // 🔄 Atualiza o cookie quando authData muda
+    const setAuthData = data => {
+        setAuthDataState(data);
+        if (data) {
+            Cookies.set(AUTH_COOKIE_KEY, JSON.stringify(data), {
+                expires: 7, // dias
+                secure: true,
+                sameSite: "strict"
+            });
+        } else {
+            Cookies.remove(AUTH_COOKIE_KEY);
+        }
+    };
 
-  // 🚪 Limpa tudo ao fazer logout
-  const logout = () => {
-    setAuthData(null);
-  };
+    const logout = () => {
+        setAuthData(null);
+        Cookies.remove(AUTH_COOKIE_KEY);
+    };
 
-  return (
-    <AuthContext.Provider value={{ authData, setAuthData, logout }}>
-      {children}
-    </AuthContext.Provider>
-  );
+    return (
+        <AuthContext.Provider value={{ authData, setAuthData, logout }}>
+            {children}
+        </AuthContext.Provider>
+    );
 };
 
 export const useAuth = () => {
-  const context = useContext(AuthContext);
-  if (!context) {
-    throw new Error("useAuth deve ser usado dentro de um AuthProvider");
-  }
-  return context;
+    const context = useContext(AuthContext);
+    if (!context) {
+        throw new Error("useAuth deve ser usado dentro de um AuthProvider");
+    }
+    return context;
 };

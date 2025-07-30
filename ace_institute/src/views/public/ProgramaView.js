@@ -16,52 +16,53 @@ const ProgamaView = () => {
       <Header />
       <main className="main">
         <section className="hero">
-          <h1 className="title">Recrutando Mentes Fora da Curva</h1>
+          <h1 className="title">Ganhar Pensando — Crescer Construindo</h1>
           <p className="subtitle">
-            Os programas da ACE não são para todos — são para aqueles prontos para transformar o mundo com ciência.
+            A VERUM recompensa mentes criativas e curiosas. Aqui, você colhe o que compartilha: conhecimento, tempo, impacto.
           </p>
           <button className="auth-button" onClick={handleAuthClick}>
-            Candidate-se Agora
+            Junte-se à Iniciativa
           </button>
         </section>
 
         <section className="content">
-          <h2>Programas Filantrópicos e Científicos</h2>
+          <h2>Como Funciona a Economia da VERUM</h2>
           <p>
-            A <strong>Academia de Ciências Extraordinária</strong> desenvolve programas voltados para jovens talentos com habilidades únicas,
-            visão crítica e espírito de descoberta. Da infância à universidade, buscamos aqueles que podem mudar paradigmas.
+            A plataforma opera por meio de um sistema de <strong>assinatura cooperativa</strong>, onde os membros recebem retorno em <strong>APY (Annual Percentage Yield)</strong> baseado no engajamento, tempo de navegação e criação de conteúdo relevante.
+          </p>
+          <p>
+            A assinatura não é apenas um acesso — é um <em>voto de confiança</em>. Cada interação gera valor. E esse valor é redistribuído.
           </p>
 
-          <h3>Iniciativas Ativas</h3>
+          <h3>Recompensas Inteligentes</h3>
           <ul>
-            <li><strong>ACE Júnior:</strong> Jovens entre 12 e 17 anos com interesse em engenharia, IA, biohacking e energia alternativa.</li>
-            <li><strong>ACE Universitário:</strong> Estudantes de graduação com potencial para liderar laboratórios de pesquisa.</li>
-            <li><strong>ACE Prodigy:</strong> Crianças superdotadas que apresentam indícios de genialidade precoce.</li>
+            <li><strong>APY Dinâmico:</strong> Quanto mais você participa, mais você recebe.</li>
+            <li><strong>Proof of Thought:</strong> Publicações, projetos, artigos e vídeos geram tokens de influência e reputação.</li>
+            <li><strong>Tempo de Consciência:</strong> Permanência ativa no site desbloqueia recompensas em ciclos mensais.</li>
           </ul>
 
-          <h3>O Que Esperar</h3>
+          <h2>Café Pallace — O Centro da Governança</h2>
+          <p>
+            Toda decisão estratégica da VERUM nasce no <strong>Café Pallace</strong>, um fórum vivo onde usuários com participação ativa votam, sugerem e constroem juntos o futuro da plataforma.
+          </p>
+
           <ul>
-            <li>Ambientes imersivos de aprendizado prático</li>
-            <li>Mentoria com especialistas e acesso a tecnologia experimental</li>
-            <li>Desafios reais que moldam o futuro</li>
+            <li><strong>Votos com lastro:</strong> O peso do seu voto é proporcional à sua reputação e contribuição.</li>
+            <li><strong>Salas Temáticas:</strong> Ciência, ficção, arte, ética e desenvolvimento colaborativo.</li>
+            <li><strong>Missões de Incubação:</strong> Ideias votadas podem virar projetos reais financiados pela comunidade.</li>
           </ul>
+
+          <h2>Ganhe Criando</h2>
+          <p>
+            Ao criar conteúdos — textos, músicas, códigos, narrativas ou experiências — você pode integrá-los ao <strong>Catálogo VERUM</strong>, onde o reconhecimento é simbólico e financeiro.
+          </p>
 
           <p>
-            Se você sente que não pertence ao comum, talvez seu lugar seja conosco.
+            Aqui, cada minuto é um investimento. Cada ideia, uma semente. E cada voto, uma escolha real.
           </p>
         </section>
 
-        <section className="media">
-          <h2>Vislumbre a Jornada</h2>
-          <iframe
-            width="100%"
-            height="315"
-            src="https://www.youtube.com/embed/4hA7G-0Gi2E"
-            title="Vídeo inspirador sobre jovens cientistas"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-          ></iframe>
-        </section>
+        
       </main>
       <Footer />
     </div>

@@ -1,24 +1,31 @@
 .footer {
   background-color: #0e0e0e;
   color: #ccc;
-  padding: 1rem 1rem;
-  font-family: "Inter", sans-serif;
+  text-align: center;
+  padding: 2rem 1rem;
   border-top: 2px solid #222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  font-family: 'Orbitron', sans-serif;
 }
 
 .container-footer {
+  width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;
-  
+  gap: 2rem;
 }
 
+/* Top Section: Logo, Redes Sociais, Links */
 .top {
   display: flex;
   flex-direction: column;
   align-items: center;
-  text-align: center;
+  gap: 2rem;
 }
 
 .logo-section {
@@ -28,45 +35,48 @@
 }
 
 .powered-text {
-  font-size: 0.9rem;
-  color: #999;
-  margin-bottom: 0.2rem;
+  font-size: 0.8rem;
+  color: #888;
+  margin-bottom: 0.4rem;
+  letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .logo-pi {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 0.6rem;
 }
 
 .pi-logo {
-  height: 40px;
-  width: auto;
+  height: 48px;
+  object-fit: contain;
 }
 
 .logo-text {
-  font-weight: 600;
+  font-weight: bold;
   font-size: 1rem;
   color: #FFD700;
+  letter-spacing: 0.5px;
 }
 
+/* Social buttons */
 .socials {
   display: flex;
-  
+  gap: 1rem;
+  flex-wrap: wrap;
   justify-content: center;
 }
 
 .social-btn {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 42px;
-  height: 42px;
   background-color: #1a1a1a;
+  border: none;
   border-radius: 10px;
+  padding: 0.6rem;
+  font-size: 1.3rem;
   color: #ccc;
-  text-decoration: none;
-  transition: background-color 0.3s ease, transform 0.2s ease, color 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
 }
 
 .social-btn:hover {
@@ -75,48 +85,47 @@
   color: #fff;
 }
 
+/* Legal Links */
 .legal {
   display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  align-items: center;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  font-size: 0.875rem;
+  color: #aaa;
 }
 
 .legal a {
   color: #aaa;
   text-decoration: none;
   font-weight: 500;
-  transition: color 0.3s ease;
+  transition: color 0.3s;
 }
 
 .legal a:hover {
   color: #fff;
 }
 
+/* Bottom copyright */
 .bottom {
+  font-size: 0.75rem;
+  color: #666;
   text-align: center;
-  font-size: 0.875rem;
-  color: #777;
 }
 
-/* ---------------------- */
-/*     Desktop layout     */
-/* ---------------------- */
+/* Desktop adjustments */
 @media (min-width: 768px) {
   .top {
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    text-align: left;
-  }
-
-  .legal {
-    flex-direction: row;
-    justify-content: flex-end;
-    gap: 1rem;
   }
 
   .logo-section {
     align-items: flex-start;
+  }
+
+  .legal {
+    justify-content: flex-end;
   }
 }

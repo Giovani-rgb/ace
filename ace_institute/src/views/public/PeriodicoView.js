@@ -7,6 +7,7 @@ const PeriodicoView = () => {
     return (
         <div>
             <Header />
+            {/* me ajude com este tambem css*/}
 
             <main className="main_periodico">
                 <section className="section_central_periodicos">

@@ -29,7 +29,9 @@ export default function BannerLog() {
         <div className="banner-log-container">
                  {" "}
             <Slider {...sliderSettings}>
-                       {" "}
+                      {/* Vamos colocar as imagens diretamente no frontend na
+                      pasta assets e de acordo com o tipo do objeto nos
+                      vamos rendenizar-la */}
                 {bannerEvents.map(banner => (
                     <div
                         key={banner.id}

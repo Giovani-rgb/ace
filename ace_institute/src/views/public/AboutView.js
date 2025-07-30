@@ -9,6 +9,7 @@ const About = () => {
       <Header />
       <main className="main">
         <section className="intro">
+        {/* Presciso que esta pagina seja dedicada a verum*/}
           <h1 className="title">Quem Somos</h1>
           <p className="text">
             Fundada em 1927 sob a égide de um tratado internacional não reconhecido, a <strong>Academia de Ciências Extraordinária (ACE)</strong> é uma organização independente e autônoma dedicada à descoberta, preservação e aplicação do conhecimento que desafia os limites da ciência convencional.

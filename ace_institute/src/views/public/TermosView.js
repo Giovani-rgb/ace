@@ -1,55 +1,62 @@
 import React from "react";
 import Header from "../../components/Header";
 import Footer from "../../components/Footer";
-import "../../styles/TermosView.css"; // caso queira adicionar estilo depois
+import "../../styles/TermosView.css"; // estilize depois se quiser
 
 const TermosView = () => {
   return (
     <div>
       <Header />
+
       <main className="main_termos">
-        <h1 className="termos_titulo">Termos de Uso da ACE</h1>
+        <h1 className="termos_titulo">Termos de Uso da VERUM</h1>
+
         <section className="termos_conteudo">
           <p>
-            Este portal é de acesso restrito e pertence à Academia de Ciências
-            Extraordinária (ACE). Ao utilizar este sistema, o usuário declara estar
-            ciente e de acordo com os seguintes termos:
+            Este portal faz parte da infraestrutura narrativa da VERUM — incubadora
+            experimental de horror analógico e ficção especulativa. Ao acessar qualquer
+            seção deste domínio, você declara estar em estado consciente (ou equivalente)
+            e concorda com as condições a seguir.
           </p>
 
-          <h2>1. Confidencialidade</h2>
+          <h2>1. Sigilo e Compartilhamento</h2>
           <p>
-            Todo o conteúdo acessado neste domínio é classificado e não deve ser
-            compartilhado fora dos canais autorizados pela Direção da ACE. Vazamentos
-            podem resultar em sanções disciplinares e procedimentos dimensionais.
+            Todo conteúdo presente aqui é de natureza simbólica, sensível ou ritual.
+            Nenhuma informação pode ser reproduzida fora dos limites da VERUM sem
+            autorização escrita de pelo menos dois Curadores.
           </p>
 
-          <h2>2. Uso de Informações</h2>
+          <h2>2. Uso de Material Interativo</h2>
           <p>
-            As informações disponíveis neste sistema são destinadas exclusivamente a
-            membros autorizados com Nível de Acesso adequado. O uso impróprio pode
-            comprometer a integridade das operações científicas em andamento.
+            As experiências, documentos e estruturas presentes neste sistema são
+            projetadas para uso interno e imersivo. Qualquer interpretação literal,
+            indevida ou fora de contexto pode gerar efeitos colaterais narrativos e/ou
+            ontológicos.
           </p>
 
-          <h2>3. Monitoramento</h2>
+          <h2>3. Monitoramento de Presença</h2>
           <p>
-            Toda atividade neste ambiente digital é registrada e analisada por
-            sistemas de vigilância automática. Tentativas de manipulação dos dados ou
-            acesso não autorizado serão contidas imediatamente.
+            Ao navegar por este domínio, sua atividade será registrada por sistemas de
+            escuta simbólica. Essas informações são utilizadas para preservar a coesão
+            dos experimentos em andamento e prevenir rupturas no véu da interface.
           </p>
 
-          <h2>4. Responsabilidade</h2>
+          <h2>4. Limites de Responsabilidade</h2>
           <p>
-            A ACE não se responsabiliza por efeitos colaterais decorrentes da
-            exposição a conteúdos anômalos, meméticos ou cognitopeligrosos. Use o
-            sistema com cautela.
+            A VERUM não se responsabiliza por desconforto, dissonância cognitiva,
+            ativação simbólica ou experiências anômalas desencadeadas durante a
+            navegação. Ao permanecer, você declara estar preparado para cruzar as
+            fronteiras do ordinário.
           </p>
 
           <p className="termos_obs">
-            Observação: A simples leitura deste documento implica aceitação irrevogável
-            dos termos, mesmo que não conscientemente compreendidos.
+            ⚠️ <strong>Nota:</strong> A simples leitura desta página implica aceitação
+            irrevogável e retroativa dos termos, mesmo que sua consciência negue ou
+            não compreenda integralmente o conteúdo.
           </p>
         </section>
       </main>
+
       <Footer />
     </div>
   );
